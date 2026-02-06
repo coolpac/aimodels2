@@ -5,9 +5,11 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import FeatureCarousel from '@/components/FeatureCarousel';
 import HowItWorks from '@/components/HowItWorks';
+import SixSteps from '@/components/SixSteps';
+import Tariff from '@/components/Tariff';
 import FAQ from '@/components/FAQ';
-import StatsCard from '@/components/StatsCard';
-import Advantages from '@/components/Advantages';
+import ReadyToStart from '@/components/ReadyToStart';
+import BottomActions from '@/components/BottomActions';
 import AnimationObserver from '@/components/AnimationObserver';
 
 export default function Home() {
@@ -15,68 +17,49 @@ export default function Home() {
     <main className="max-w-[600px] mx-auto min-h-screen relative">
       <AnimationObserver />
 
-      {/* Status Bar */}
+      {/* 1. Status Bar */}
       <StatusBar />
 
-      {/* Header */}
+      {/* 2. Header */}
       <Header />
 
-      {/* Hero */}
+      {/* 3-5. Hero: Image + Title + Subtitle + "Подробнее" */}
       <HeroSection />
 
-      {/* Search Pill */}
-      <div className="px-5 -mt-2 mb-8 fade-up">
-        <button className="pill-gradient w-full py-4 px-6 flex items-center justify-between text-white">
-          <span className="text-sm font-medium">Подобрать подходящую пару</span>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M7 4l6 6-6 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Feature Carousel */}
-      <div className="mb-8">
+      {/* 7. "AI, КОТОРЫЙ ЗАРАБАТЫВАЕТ" + carousel + text + "Как это работает?" */}
+      <div className="mb-10 mt-6">
         <FeatureCarousel />
       </div>
 
-      {/* Calculate Exchange Button */}
-      <div className="px-5 mb-8 fade-up">
-        <button className="btn-gradient w-full py-4 px-6 text-center text-white font-semibold text-sm">
-          Рассчитать обмен
-        </button>
-      </div>
-
-      {/* How It Works */}
-      <div className="mb-8">
+      {/* 8-9. "Как это работает?" + testimonial + carousel + "ХОЧЕШЬ, НАУЧУ ТАКЖЕ?" */}
+      <div className="mb-10">
         <HowItWorks />
       </div>
 
-      {/* FAQ */}
-      <div className="mb-8">
+      {/* 11. "6 шагов" */}
+      <div className="mb-10">
+        <SixSteps />
+      </div>
+
+      {/* 12. "ТАРИФ" */}
+      <div className="mb-10">
+        <Tariff />
+      </div>
+
+      {/* 13. "FAQ" */}
+      <div className="mb-10">
         <FAQ />
       </div>
 
-      {/* Stats */}
-      <div className="mb-8">
-        <StatsCard />
+      {/* 14. "Готов начать сегодня?" */}
+      <div className="mb-4">
+        <ReadyToStart />
       </div>
 
-      {/* Advantages */}
-      <div className="mb-8">
-        <Advantages />
-      </div>
+      {/* 15. Bottom Actions */}
+      <BottomActions />
 
-      {/* Bottom CTAs */}
-      <div className="px-5 space-y-3 pb-12 fade-up">
-        <button className="btn-gradient w-full py-4 px-6 text-center text-white font-semibold text-sm">
-          Начать обмен
-        </button>
-        <button className="pill-gradient w-full py-4 px-6 text-center text-white font-medium text-sm">
-          Связаться с поддержкой
-        </button>
-      </div>
-
-      {/* Bottom safe area for Telegram */}
+      {/* Bottom safe area */}
       <div className="h-20" />
     </main>
   );

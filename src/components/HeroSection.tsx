@@ -2,48 +2,49 @@
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden" style={{ minHeight: '500px' }}>
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-transparent" />
-
-      {/* Decorative grid pattern */}
+    <section className="relative w-full overflow-hidden" style={{ height: '100svh', minHeight: '600px' }}>
+      {/* Real hero image */}
       <div
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0"
         style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
+          backgroundImage: 'url(/hero.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
         }}
       />
 
-      <div className="relative z-10 px-5 pt-12 pb-8">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10">
-          <span className="w-2 h-2 rounded-full bg-[#D3F800] pulse-dot" />
-          <span className="text-xs font-medium text-white/80 uppercase tracking-wider">ODELCORE AI</span>
-        </div>
+      {/* Overlay gradient for text readability */}
+      <div className="absolute inset-0 hero-overlay" />
 
-        {/* Main heading */}
-        <h2 className="text-[42px] leading-[1.05] font-black text-white mb-3 tracking-tight">
-          OTC<br />
-          <span className="text-gradient">ОБМЕННИК</span><br />
-          КРИПТОВАЛЮТ
+      {/* Bottom gradient fade into page background */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-56"
+        style={{
+          background: 'linear-gradient(to top, #0F0F0F 0%, rgba(15,15,15,0.8) 40%, transparent 100%)',
+        }}
+      />
+
+      {/* Content pinned to bottom */}
+      <div className="relative z-10 h-full px-5 flex flex-col items-center text-center justify-end pb-10">
+        <p className="text-white/80 text-xs tracking-[0.3em] uppercase font-medium mb-5">
+          ODELCORE AI
+        </p>
+
+        <h2 className="text-white text-xl font-bold leading-snug mb-5 tracking-wide">
+          СОЗДАНИЕ<br />
+          И МОНЕТИЗАЦИЯ ИИ-МОДЕЛЕЙ
         </h2>
 
-        {/* Subtitle text blocks */}
-        <p className="text-white/70 text-base leading-relaxed mt-6 max-w-[360px]">
-          Безопасный обмен криптовалюты с лучшими курсами.
-          Поддержка 6+ криптовалют и фиатных валют.
+        <p className="text-white text-lg font-bold leading-snug mb-1">
+          ГЕНЕРАЦИЯ И
+        </p>
+        <p className="text-white text-lg font-bold leading-snug mb-8">
+          ПРОДАЖА 18+ КОНТЕНТА
         </p>
 
-        <p className="text-white/50 text-sm leading-relaxed mt-4 max-w-[340px]">
-          Генеральная палата AI · Монетизации · Модели имонетизации ·
-          II-модели · Контентa
-        </p>
-
-        <p className="text-white/40 text-xs leading-relaxed mt-3 max-w-[340px]">
-          Подходящую продуктовую бизнес-модель для вашего AI-проекта.
-          Контент · Аналитика · Продажи
-        </p>
+        <button className="pill-gradient px-8 py-3 text-white text-sm font-medium">
+          Подробнее
+        </button>
       </div>
     </section>
   );

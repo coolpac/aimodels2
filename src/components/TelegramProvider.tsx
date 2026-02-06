@@ -11,13 +11,11 @@ export default function TelegramProvider({ children }: { children: React.ReactNo
         tg.ready();
         tg.expand();
 
-        // Main button
-        tg.MainButton.text = 'Начать обмен';
+        tg.MainButton.text = 'Хочу начать';
         tg.MainButton.color = '#075500';
         tg.MainButton.textColor = '#D3F800';
         tg.MainButton.show();
 
-        // Apply theme params
         if (tg.themeParams) {
           const root = document.documentElement;
           Object.entries(tg.themeParams).forEach(([key, value]) => {
@@ -27,9 +25,7 @@ export default function TelegramProvider({ children }: { children: React.ReactNo
       }
     };
 
-    // Try immediately in case script already loaded
     initTg();
-    // Also try after a short delay
     const timer = setTimeout(initTg, 500);
     return () => clearTimeout(timer);
   }, []);

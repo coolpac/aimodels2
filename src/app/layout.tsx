@@ -4,14 +4,14 @@ import "./globals.css";
 import TelegramProvider from "@/components/TelegramProvider";
 
 const inter = Inter({
-  variable: "--font-geist-sans",
+  variable: "--font-inter",
   subsets: ["latin", "cyrillic"],
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "OTC Обменник Криптовалют | ODELCORE AI",
-  description: "Безопасный обмен криптовалюты с лучшими курсами. Поддержка 6+ криптовалют и фиатных валют. AI-powered OTC exchange.",
+  title: "ODELCORE AI | Создание и монетизация ИИ-моделей",
+  description: "Создание и монетизация ИИ-моделей. Генерация контента и продажа с помощью искусственного интеллекта.",
 };
 
 export const viewport: Viewport = {

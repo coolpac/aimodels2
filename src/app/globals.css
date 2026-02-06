@@ -5,25 +5,28 @@
   --color-foreground: #ffffff;
   --color-accent-green: #075500;
   --color-accent-lime: #D3F800;
-  --color-card-bg: rgba(217, 217, 217, 0.2);
-  --color-card-border: rgba(255, 255, 255, 0.1);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card-bg: rgba(217, 217, 217, 0.15);
+  --font-sans: var(--font-inter);
 }
 
 * {
   -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(180deg, #0F0F0F 0%, #02691A 15%, #0a4a10 35%, #6E770A 60%, #999999 100%);
+  background: linear-gradient(180deg, #0F0F0F 0%, #02691A 18%, #0a4a10 35%, #6E770A 62%, #999999 100%);
   color: #ffffff;
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), 'Inter', Arial, Helvetica, sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* Glass card effect */
+/* Glass card effect with gradient border */
 .glass-card {
   background: rgba(217, 217, 217, 0.15);
   backdrop-filter: blur(12px);
@@ -50,7 +53,7 @@ body {
   background: rgba(217, 217, 217, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-radius: 28px;
+  border-radius: 9999px;
   position: relative;
 }
 
@@ -58,7 +61,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 28px;
+  border-radius: 9999px;
   padding: 1px;
   background: linear-gradient(135deg, #075500, #D3F800);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -70,7 +73,7 @@ body {
 /* Solid gradient button */
 .btn-gradient {
   background: linear-gradient(135deg, #075500, #28a006, #D3F800);
-  border-radius: 28px;
+  border-radius: 9999px;
   transition: opacity 0.2s, transform 0.15s;
 }
 
@@ -168,7 +171,7 @@ body {
   transform: rotate(45deg);
 }
 
-/* Pulse animation for badge */
+/* Pulse animation */
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
@@ -176,4 +179,21 @@ body {
 
 .pulse-dot {
   animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Hero image overlay */
+.hero-overlay {
+  background: linear-gradient(180deg,
+    rgba(15, 15, 15, 0.3) 0%,
+    rgba(2, 105, 26, 0.25) 40%,
+    rgba(15, 15, 15, 0.6) 80%,
+    rgba(15, 15, 15, 0.95) 100%
+  );
+}
+
+/* Strikethrough price */
+.price-old {
+  text-decoration: line-through;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-decoration-thickness: 2px;
 }
