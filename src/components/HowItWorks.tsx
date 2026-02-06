@@ -49,16 +49,15 @@ export default function HowItWorks() {
 
   return (
     <div className="px-5 fade-up">
-      {/* Title as pill button */}
-      <div className="flex justify-center mb-6">
-        <span className="pill-gradient px-6 py-3 text-white font-semibold text-sm">
-          Как это работает?
-        </span>
-      </div>
-
       {/* Testimonial text */}
-      <p className="text-white/80 text-sm leading-relaxed mb-5 text-center">
-        Я начала создавать ИИ-девушек в мае 2025, моя первая модель на данный момент заработала +11,000$ за 9 месяцев. Сейчас у меня своё мини агенство из 6 ИИ-моделей, каждая из которых зарабатывает 3,500-12,500$ в месяц.
+      <p className="text-[15px] leading-[1.8] mb-6 text-center">
+        <span className="text-white/80">Я начала создавать ИИ-девушек в мае 2025, моя первая модель на данный момент заработала </span>
+        <span className="text-gradient font-bold text-[17px]">+11,000$</span>
+        <span className="text-white/80"> за 9 месяцев. Сейчас у меня своё мини агенство из </span>
+        <span className="text-white font-semibold">6 ИИ-моделей</span>
+        <span className="text-white/80">, каждая из которых зарабатывает </span>
+        <span className="text-gradient font-bold text-[17px]">3,500–12,500$</span>
+        <span className="text-white/80"> в месяц.</span>
       </p>
 
       {/* Dark card carousel */}

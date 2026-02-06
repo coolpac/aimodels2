@@ -17,9 +17,8 @@ export default function TelegramProvider({ children }: { children: React.ReactNo
         tg.MainButton.show();
 
         if (tg.themeParams) {
-          const root = document.documentElement;
           Object.entries(tg.themeParams).forEach(([key, value]) => {
-            root.style.setProperty(`--tg-${key}`, value);
+            document.body.style.setProperty(`--tg-${key}`, value);
           });
         }
       }

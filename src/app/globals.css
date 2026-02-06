@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, #0F0F0F 0%, #02691A 18%, #0a4a10 35%, #6E770A 62%, #999999 100%);
+  background: linear-gradient(180deg, #0F0F0F 0%, #02691A 15.87%, #000000 33.65%, #6E770A 54.81%, #000000 77.4%, #999999 100%);
   color: #ffffff;
   font-family: var(--font-sans), 'Inter', Arial, Helvetica, sans-serif;
   min-height: 100vh;
@@ -89,7 +89,7 @@ body {
 
 /* Gradient text */
 .text-gradient {
-  background: linear-gradient(135deg, #D3F800, #28a006);
+  background: linear-gradient(135deg, #E8FF4A, #7BFF3A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -184,10 +184,11 @@ body {
 /* Hero image overlay */
 .hero-overlay {
   background: linear-gradient(180deg,
-    rgba(15, 15, 15, 0.3) 0%,
-    rgba(2, 105, 26, 0.25) 40%,
-    rgba(15, 15, 15, 0.6) 80%,
-    rgba(15, 15, 15, 0.95) 100%
+    rgba(15, 15, 15, 0.2) 0%,
+    rgba(15, 15, 15, 0.1) 30%,
+    rgba(15, 15, 15, 0.4) 60%,
+    rgba(15, 15, 15, 0.85) 85%,
+    #0F0F0F 100%
   );
 }
 

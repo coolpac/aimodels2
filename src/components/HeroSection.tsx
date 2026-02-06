@@ -18,9 +18,9 @@ export default function HeroSection() {
 
       {/* Bottom gradient fade into page background */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-56"
+        className="absolute bottom-0 left-0 right-0 h-64"
         style={{
-          background: 'linear-gradient(to top, #0F0F0F 0%, rgba(15,15,15,0.8) 40%, transparent 100%)',
+          background: 'linear-gradient(to top, #02691A 0%, rgba(15,15,15,0.9) 30%, transparent 100%)',
         }}
       />
 

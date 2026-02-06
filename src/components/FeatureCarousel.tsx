@@ -87,15 +87,24 @@ export default function FeatureCarousel() {
       </div>
 
       {/* Text content */}
-      <div className="space-y-4">
-        <p className="text-white/70 text-sm leading-relaxed">
-          Ты заходишь туда, где деньги уже есть – и их забирают не самые умные, а самые быстрые.
+      <div className="space-y-5">
+        <p className="text-[15px] leading-[1.8] text-white/80">
+          <span className="text-white font-bold">Ты заходишь туда, где деньги уже есть</span>
+          {' '}– и их забирают не самые умные, а{' '}
+          <span className="text-gradient font-bold">самые быстрые.</span>
         </p>
-        <p className="text-white/70 text-sm leading-relaxed">
-          AI-модели в нише 18+ продают внимание, эмоции и фантазии 24/7, бесплатно и без выходных.
+        <p className="text-[15px] leading-[1.8] text-white/80">
+          AI-модели в нише 18+ продают{' '}
+          <span className="text-white font-bold">внимание, эмоции и фантазии</span>
+          {' '}24/7, бесплатно и без выходных.
         </p>
-        <p className="text-white/70 text-sm leading-relaxed">
-          Ты создаёшь цифровых девушек, которые выглядят и продают как живые, показываешь их в соцсетях, запускаешь их в трафик и превращаешь интерес фанатов в свой доход, масштабируя его без лимитов
+        <p className="text-[15px] leading-[1.8] text-white/80">
+          Ты создаёшь{' '}
+          <span className="text-white font-bold">цифровых девушек</span>
+          , которые выглядят и продают как живые, показываешь их в соцсетях, запускаешь их в трафик и превращаешь{' '}
+          <span className="text-white font-bold">интерес фанатов в свой доход</span>
+          , масштабируя его{' '}
+          <span className="text-gradient font-bold">без лимитов</span>
         </p>
       </div>
 
