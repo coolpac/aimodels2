@@ -2,11 +2,14 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import TelegramProvider from "@/components/TelegramProvider";
+import AnalyticsProvider from "@/components/AnalyticsProvider";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "900"],
+  display: "swap", /* show text immediately, swap font when loaded */
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -31,7 +34,9 @@ export default function RootLayout({
     <html lang="ru" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased`} suppressHydrationWarning>
         <TelegramProvider>
-          {children}
+          <AnalyticsProvider>
+            {children}
+          </AnalyticsProvider>
         </TelegramProvider>
       </body>
     </html>

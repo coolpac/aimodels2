@@ -1,9 +1,10 @@
 'use client';
 
+import AdminButton from './AdminButton';
+
 function PillButton({ children }: { children: React.ReactNode }) {
   return (
     <button className="pill-gradient w-full py-4 px-6 flex items-center text-white font-medium text-sm">
-      {/* Invisible spacer to balance the arrow on the right */}
       <span className="w-5 shrink-0" />
       <span className="flex-1 text-center">{children}</span>
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="shrink-0 opacity-60">
@@ -30,21 +31,38 @@ export default function BottomActions() {
         }}
       />
 
-      <div className="px-5 space-y-2.5 pb-8 pt-2">
-        <PillButton>Хочу начать</PillButton>
-
-        <div className="w-full py-2 px-6 text-center">
-          <span className="text-white/60 font-medium text-sm">Связь</span>
+      {/* Desktop: horizontal row of buttons */}
+      <div className="pb-8 pt-2">
+        {/* Mobile: stacked */}
+        <div className="lg:hidden space-y-2.5">
+          <PillButton>Хочу начать</PillButton>
+          <div className="w-full py-2 px-6 text-center">
+            <span className="text-white/60 font-medium text-sm">Связь</span>
+          </div>
+          <PillButton>TG канал</PillButton>
+          <div className="w-full py-2 px-6 text-center">
+            <span className="text-white/50 font-medium text-sm">aimodelcore@gmail.com</span>
+          </div>
+          <PillButton>Поддержка</PillButton>
         </div>
 
-        <PillButton>TG канал</PillButton>
-
-        <div className="w-full py-2 px-6 text-center">
-          <span className="text-white/50 font-medium text-sm">aimodelcore@gmail.com</span>
+        {/* Desktop: compact grid */}
+        <div className="hidden lg:block">
+          <div className="grid grid-cols-3 gap-4 mb-4">
+            <PillButton>Хочу начать</PillButton>
+            <PillButton>TG канал</PillButton>
+            <PillButton>Поддержка</PillButton>
+          </div>
+          <div className="flex items-center justify-center gap-6">
+            <span className="text-white/60 font-medium text-sm">Связь</span>
+            <span className="text-white/30">•</span>
+            <span className="text-white/50 font-medium text-sm">aimodelcore@gmail.com</span>
+          </div>
         </div>
-
-        <PillButton>Поддержка</PillButton>
       </div>
+
+      {/* Admin button — visible only for admins */}
+      <AdminButton />
     </div>
   );
 }

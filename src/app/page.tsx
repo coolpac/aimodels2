@@ -1,7 +1,5 @@
 'use client';
 
-import StatusBar from '@/components/StatusBar';
-import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import FeatureCarousel from '@/components/FeatureCarousel';
 import HowItWorks from '@/components/HowItWorks';
@@ -14,53 +12,55 @@ import AnimationObserver from '@/components/AnimationObserver';
 
 export default function Home() {
   return (
-    <main className="max-w-[600px] mx-auto min-h-screen relative">
+    <main className="w-full min-h-screen relative overflow-hidden">
       <AnimationObserver />
 
-      {/* 1. Status Bar */}
-      <StatusBar />
+      {/* Ambient glow orbs */}
+      <div className="glow-orb w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-[#02691A] top-[800px] -left-[100px]" />
+      <div className="glow-orb w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] bg-[#D3F800] top-[1600px] -right-[80px]" style={{ animationDelay: '3s' }} />
+      <div className="glow-orb w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] bg-[#075500] top-[2800px] -left-[60px]" style={{ animationDelay: '5s' }} />
 
-      {/* 2. Header */}
-      <Header />
-
-      {/* 3-5. Hero: Image + Title + Subtitle + "Подробнее" */}
+      {/* Hero: full width */}
       <HeroSection />
 
-      {/* 7. "AI, КОТОРЫЙ ЗАРАБАТЫВАЕТ" + carousel + text + "Как это работает?" */}
-      <div className="mb-10 mt-6">
-        <FeatureCarousel />
+      {/* Hero→content transition */}
+      <div
+        className="relative w-full h-32 lg:h-40 -mt-px pointer-events-none"
+        style={{
+          background: 'linear-gradient(to bottom, #0F0F0F 0%, #0F0F0F 10%, rgba(15,15,15,0.7) 40%, rgba(15,15,15,0.3) 70%, transparent 100%)',
+        }}
+      />
+
+      {/* Content sections — inner container with responsive padding */}
+      <div className="max-w-[1400px] mx-auto px-5 lg:px-16 xl:px-24">
+        <section id="kak-eto-rabotaet" className="mb-16 lg:mb-16 scroll-mt-15 lg:scroll-mt-20">
+          <FeatureCarousel />
+        </section>
+
+        <div className="mb-10 lg:mb-16">
+          <HowItWorks />
+        </div>
+
+        <div className="mb-10 lg:mb-16">
+          <SixSteps />
+        </div>
+
+        <div className="mb-10 lg:mb-16">
+          <Tariff />
+        </div>
+
+        <div className="mb-10 lg:mb-16">
+          <FAQ />
+        </div>
+
+        <div className="mb-4">
+          <ReadyToStart />
+        </div>
+
+        <BottomActions />
+
+        <div className="h-20" />
       </div>
-
-      {/* 8-9. "Как это работает?" + testimonial + carousel + "ХОЧЕШЬ, НАУЧУ ТАКЖЕ?" */}
-      <div className="mb-10">
-        <HowItWorks />
-      </div>
-
-      {/* 11. "6 шагов" */}
-      <div className="mb-10">
-        <SixSteps />
-      </div>
-
-      {/* 12. "ТАРИФ" */}
-      <div className="mb-10">
-        <Tariff />
-      </div>
-
-      {/* 13. "FAQ" */}
-      <div className="mb-10">
-        <FAQ />
-      </div>
-
-      {/* 14. "Готов начать сегодня?" */}
-      <div className="mb-4">
-        <ReadyToStart />
-      </div>
-
-      {/* 15. Bottom Actions */}
-      <BottomActions />
-
-      {/* Bottom safe area */}
-      <div className="h-20" />
     </main>
   );
 }
