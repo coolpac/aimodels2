@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <div className="flex items-center justify-between px-5 py-3">
       <span className="text-white text-xs font-medium tracking-wider uppercase">
-        ODELCORE AI
+        MODELCORE AI
       </span>
       <div className="flex items-center gap-3">
         <button className="pill-gradient px-4 py-2 flex items-center gap-2 text-white text-sm">

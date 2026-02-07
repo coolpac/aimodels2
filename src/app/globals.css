@@ -23,22 +23,7 @@ html {
 }
 
 body {
-  /* Плавный градиент: тёмный верх → изумрудная середина → тёплый тёмно-зелёный низ */
-  background:
-    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(2, 105, 26, 0.35), transparent 50%),
-    radial-gradient(ellipse 80% 60% at 90% 60%, rgba(110, 119, 10, 0.2), transparent 45%),
-    radial-gradient(ellipse 70% 50% at 10% 80%, rgba(7, 85, 0, 0.25), transparent 45%),
-    linear-gradient(180deg,
-      #0a0a0a 0%,
-      #0F0F0F 8%,
-      #0d1a0f 18%,
-      #052010 32%,
-      #073d12 48%,
-      #052a0d 65%,
-      #0d1f0a 82%,
-      #0F0F0F 100%
-    );
-  background-attachment: fixed;
+  background: linear-gradient(180deg, #0F0F0F 0%, #02691A 15.87%, #000000 33.65%, #6E770A 54.81%, #000000 77.4%, #999999 100%);
   color: #ffffff;
   font-family: var(--font-sans), 'Inter', Arial, Helvetica, sans-serif;
   min-height: 100vh;
@@ -406,6 +391,31 @@ body {
       inset 0 1px 0 rgba(255, 255, 255, 0.08);
   }
 
+  .pill-gradient {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+}
+
+/* Кнопки внизу страницы — выезд сбоку */
+@keyframes slide-in-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bottom-action-slide-in {
+  animation: slide-in-from-right 0.45s ease-out forwards;
+  opacity: 0;
+}
+
+@media (min-width: 1024px) {
   .pill-gradient {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);

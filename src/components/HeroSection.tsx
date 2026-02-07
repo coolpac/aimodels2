@@ -68,8 +68,13 @@ export default function HeroSection() {
       className="relative w-full overflow-hidden"
       style={{ height: '100svh', minHeight: '640px' }}
     >
-      {/* Dark base */}
-      <div className="absolute inset-0 bg-[#0F0F0F]" />
+      {/* Base — тот же градиент, что и у главной страницы */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(180deg, #0F0F0F 0%, #02691A 15.87%, #000000 33.65%, #6E770A 54.81%, #000000 77.4%, #999999 100%)',
+        }}
+      />
 
       {/* Scattered model image cards */}
       <div className="absolute inset-0" aria-hidden="true">
@@ -110,7 +115,7 @@ export default function HeroSection() {
       <div className="relative z-10 h-full px-5 lg:px-10 flex flex-col items-center justify-center text-center">
         <div className="w-full max-w-[360px] lg:max-w-[600px] flex flex-col items-center">
           <p className="text-white/50 text-xs lg:text-sm tracking-[0.4em] uppercase font-medium mb-4 lg:mb-6 text-glow-green">
-            ODELCORE AI
+            MODELCORE AI
           </p>
 
           <h2 className="section-title text-3xl md:text-4xl lg:text-6xl xl:text-7xl text-white leading-[1.1] mb-5 lg:mb-8">

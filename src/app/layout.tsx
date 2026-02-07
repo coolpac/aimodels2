@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ODELCORE AI | Создание и монетизация ИИ-моделей",
+  title: "MODELCORE AI | Создание и монетизация ИИ-моделей",
   description: "Создание и монетизация ИИ-моделей. Генерация контента и продажа с помощью искусственного интеллекта.",
 };
 
